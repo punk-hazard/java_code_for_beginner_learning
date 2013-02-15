@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class konvEr {
+    public float rupiah (float x){
+        System.out.println("Nilai tukar Rupiah => Dollar US");
+        return (x/9100f);
+    }
+    public int dollar (int x){
+        System.out.println("Nilai tukar Dollar US => Rupiah");
+        return (x*9100);
+    }
+
+    public static void main (String args[]){
+        Scanner input=new Scanner(System.in);
+        konvEr obj=new konvEr ();
+        int y;
+        char lanjut;
+        String masukan;
+        do{
+            System.out.print("Berapa Rupiah = Rp.");
+            y=input.nextInt();
+            System.out.println("Jumlahnya = US$ "+obj.rupiah(y));
+            System.out.print("Lanjut...? y/t = ");
+            masukan = input.next();
+            lanjut=masukan.charAt(0);
+            if (lanjut=='y') {
+                    System.out.print("Berapa Dollar US = US$ ");
+                    y=input.nextInt();
+                    System.out.println("Jumlahnya = Rp."+obj.dollar(y));
+                    System.out.print("Lanjut? y/t = ");
+            }
+         System.out.print("Program Selesai, ulangi dari awal...? y/t ====> ");
+         System.out.print("Jawaban anda = ");
+         masukan = input.next();
+         lanjut=masukan.charAt(0);
+       } while (lanjut=='y');
+        
+    }
+
+}

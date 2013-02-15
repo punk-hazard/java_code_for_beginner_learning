@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class gajiPeg {
+    public static void main(String args[]){
+        Scanner isi = new Scanner(System.in);
+        String nm;
+        int gj,bln,totalGaji;
+        float x,y,bns=0;
+        System.out.print("Masukkan Nama Anda : ");
+        nm=isi.nextLine();
+        System.out.print("Masukkan Gaji Pokok Anda = Rp.");
+        gj=isi.nextInt();
+        System.out.print("Masukkan berapa bulan masa kerja anda : ");
+        bln=isi.nextInt();
+        x=(float)bln/12;
+        y=(float)bln/24;
+        if (bln<3)
+            System.out.println("Maaf, anda tidak mendapatkan bonus");
+        else if (bln<=12)
+            bns=(float)x*gj;
+        else if (bln<=24)
+            bns=(float)gj+(gj*y);
+        else if (bln>24)
+            bns=3*gj;
+
+        totalGaji=(int)((int) gj + bns);
+        System.out.println("Nama anda adalah "+nm+" dan masa kerja anda sudah "+bln+" bulan");
+        System.out.println("Dan bonus anda adalah Rp."+bns+", sehingga Gaji Total anda adalah Rp."+totalGaji);
+            
+    }
+}

@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class enc {
+protected static int a;
+protected static int b;
+    protected static int hargatiga(){
+    return a/3;
+}
+    protected static int hargaenam(){
+    return a/6;
+}
+    protected static int hargaduabelas(){
+    return a/12;
+}
+}
+class harga2 extends enc {
+    private static float v;
+    private static float c;
+    public static void main (String args[]){
+        Scanner input=new Scanner(System.in);
+        System.out.print("Harga barang = Rp.");
+        a=input.nextInt();
+        System.out.print("Berapa kali cicilan = 3x/6x/12x ");
+        b=input.nextInt();
+        if (b==3){
+            c=((Tugas2.hargatiga())/20f);
+            v=((Tugas2.hargatiga())+c);
+            System.out.println("Jumlah cicilan anda setiap bulan +5% bunga, adalah Rp."+v);
+        }
+        else if (b==6) {
+            c=((Tugas2.hargaenam())/20f);
+            v=((Tugas2.hargaenam())+c);
+            System.out.println("Jumlah cicilan anda setiap bulan +5% bunga, adalah Rp."+v);
+        }
+        else if (b==12) {
+            c=((Tugas2.hargaduabelas())/20f);
+            v=((Tugas2.hargaduabelas())+c);
+            System.out.println("Jumlah cicilan anda setiap bulan +5% bunga, adalah Rp."+v);
+        }
+        else {
+            System.out.println("Maaf, jumlah cicilan yang diminta tidak terdaftar");
+        }
+
+    }
+
+}

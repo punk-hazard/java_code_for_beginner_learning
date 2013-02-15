@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class rerata {
+    public static void main (String args[]){
+        Scanner isi = new Scanner (System.in);
+        int nil1,nil2,nil3,nil4,nil5;
+        float rata,jumlah;
+        System.out.print("Masukkan Nilai 1 = ");
+        nil1 = isi.nextInt();
+        System.out.print("Masukkan Nilai 2 = ");
+        nil2 = isi.nextInt();
+        System.out.print("Masukkan Nilai 3 = ");
+        nil3 = isi.nextInt();
+        System.out.print("Masukkan Nilai 4 = ");
+        nil4 = isi.nextInt();
+        System.out.print("Masukkan Nilai 5 = ");
+        nil5 = isi.nextInt();
+        jumlah = nil1+nil2+nil3+nil4+nil5;
+        rata = jumlah/5f;
+        System.out.println ("Sehingga, jumlahnya adalah "+jumlah);
+	System.out.println ("Sehingga, rata adalah "+rata);
+    }
+}

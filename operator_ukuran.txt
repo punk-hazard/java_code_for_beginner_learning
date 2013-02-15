@@ -1,0 +1,29 @@
+public class operatorWork {
+    private int kolom;
+    public operatorWork(){
+        }
+    public operatorWork(int kolom){
+        this.kolom = kolom;
+    }
+    public void baris(int kolom){
+        this.kolom = kolom;
+    }
+    public int getKolom(){
+        return kolom;
+    }
+    public void tampilkan(){
+        System.out.println("Angka         Kuadrat         Kubik");
+        for (int i=0;i<kolom;i++){
+            System.out.println(i+"              "+(i*i)+"              "+(i*i*i));
+        }
+    }
+    static void lihat(){
+        operatorWork tampil = new operatorWork(11);
+        tampil.tampilkan();
+        
+    }
+    public static void main(String args[]){
+        lihat();
+    }
+    
+}

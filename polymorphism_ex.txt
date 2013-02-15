@@ -1,0 +1,62 @@
+class polyMorph {
+    protected void Pernyataan(){
+        System.out.println("Inilah macam bentuk bilangan =");
+    }
+    protected void Bilangan() {
+        int a ;
+        for (a=0;a<=10;a++){
+            System.out.println(a);
+        }
+    }
+    protected void Fibonacci() {
+      int b = 0, c = 1;
+      for (int i = 1; i <= 10; i++) {
+         b = b + c;
+         c = b - c;
+         System.out.println(b);
+      }
+    }
+    protected void Ganjil(){
+        int a ;
+        for (a=0;a<=20;a++){
+            if (a%2==1)
+                System.out.println(a);
+        }
+
+    }
+    protected void Genap() {
+        int a ;
+        for (a=2;a<=20;a++){
+            if (a%2==0)
+                System.out.println(a);
+        }
+    }
+    private void Asal2() {
+        System.out.println("Nilai = "+x);
+    }
+    int x=10;
+}
+class Tugas3Turunan extends polyMorph {
+    public void Bilangan(){
+        System.out.println(super.x+" Deret Bilangan Bulat = ");super.Bilangan();System.out.println();
+    }
+    public void Fibonacci(){
+        System.out.println(super.x+" Deret Fibonacci = ");super.Fibonacci();System.out.println();
+    }
+    public void Ganjil(){
+        System.out.println(super.x+" Deret Bilangan Ganjil = "); super.Ganjil();System.out.println();
+    }
+    public void Genap(){
+        System.out.println(super.x+" Deret Bilangan Genap = "); super.Genap();System.out.println();
+    }
+    public static void main (String args[]){
+        Tugas3 a=new Tugas3();
+        Tugas3Turunan b=new Tugas3Turunan();
+        a.Pernyataan();System.out.println();
+        b.Bilangan();
+        b.Fibonacci();
+        b.Ganjil();
+        b.Genap();
+
+    }
+}
